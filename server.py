@@ -14,7 +14,10 @@ def sent_emotion():
     fear = response['fear']
     joy = response['joy']
     sadness = response['sadness']    
-    dominant_emotion = response['dominant_emotion']   
+    dominant_emotion = response['dominant_emotion']
+
+    if dominant_emotion == None:
+        return "Invalid text! Please try again!"    
 
     return f"""For the given statement, the system response is 'anger': {anger},
     'digust': {disgust}, 'fear': {fear}, 'joy': {joy}, and 'sadness': {sadness}.
